@@ -1,1 +1,2 @@
 host: hello-fuf-helm-dev.fuf.sikademo.com
+TEXT_SUFFIX: "(dev)"
