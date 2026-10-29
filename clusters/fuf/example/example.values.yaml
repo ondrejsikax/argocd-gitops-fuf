@@ -1,0 +1,4 @@
+TEXT: "Hello from fuf cluster!"
+BACKGROUND_COLOR: "#535353"
+host: example.fuf.sikademo.com
+replicas: 3
