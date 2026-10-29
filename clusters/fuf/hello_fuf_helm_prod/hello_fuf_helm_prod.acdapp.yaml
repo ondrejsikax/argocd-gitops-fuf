@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-fuf-helm-prod
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: hello-fuf-helm-prod
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: https://github.com/ondrejsikax/hello-fuf-k8s.git
+      path: ./helm
+      helm:
+        valueFiles:
+          - $values/clusters/fuf/hello_fuf_helm_prod/hello_fuf_helm_prod.values.yaml
+    - repoURL: https://github.com/ondrejsikax/argocd-gitops-fuf.git
+      ref: values
