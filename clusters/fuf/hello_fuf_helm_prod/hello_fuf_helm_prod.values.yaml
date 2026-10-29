@@ -1,2 +1,2 @@
 host: hello-fuf-helm-prod.fuf.sikademo.com
-replicas: 6
+replicas: 4
