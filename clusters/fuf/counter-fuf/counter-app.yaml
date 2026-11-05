@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: counter-app
+  name: counter-backend
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/HonzaFoniok/deploy-this-to-k8s.git
-    path: k8s
-    targerRevision: HEAD
+    path: k8s/backend-deployment
+      targetRevision: HEAD
   destination:
     namespace: counter-app
     server: https://kubernetes.default.svc
