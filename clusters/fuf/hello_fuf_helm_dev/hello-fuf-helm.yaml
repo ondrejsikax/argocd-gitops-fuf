@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/ondrejsikax/hello-fuf-k8s.git
-    path: helm/hello-fuf
+    path: helm
     targetRevision: main
   destination:
     namespace: hello-fuf-helm
@@ -15,6 +15,6 @@ spec:
   syncPolicy:
     automated:
       prune: true
-      selfHeal: true
+      selfHeal: truei
     syncOptions:
       - CreateNamespace=true
