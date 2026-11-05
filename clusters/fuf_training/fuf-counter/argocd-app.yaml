@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-fuf-helm
+  name: counter-app
   namespace: argocd
-spec:
+spec: 
   project: default
   source:
-    repoURL: https://github.com/ondrejsikax/hello-fuf-k8s.git
-    path: helm
-    targetRevision: main
+    repoURL: https://github.com/HonzaFoniok/deploy-this-to-k8s.git
+    path: k8s
+    targetRevision: HEAD
   destination:
-    namespace: hello-fuf-helm
+    namespace: counter-app
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: truei
+      prune: True
+      selfHeal: True
     syncOptions:
       - CreateNamespace=true

@@ -1,3 +1,0 @@
-host: hello-fuf-helm-prod.fuf.sikademo.com
-replicas: 4
-TEXT_SUFFIX: "(prod)"
