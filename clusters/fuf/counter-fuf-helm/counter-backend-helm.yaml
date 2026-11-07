@@ -10,7 +10,7 @@ spec:
     path: helm/backend
     targetRevision: HEAD
   destination:
-    namespace: counter-app
+    namespace: counter-app-helm
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
