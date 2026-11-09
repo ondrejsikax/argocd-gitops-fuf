@@ -21,3 +21,4 @@ spec:
       valuesObject:
         host: hello.fuf.sikademo.com
         TEXT_SUFFIX: "(fuf)"
+        replicas: 2
