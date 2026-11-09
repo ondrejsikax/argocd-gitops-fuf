@@ -4,7 +4,7 @@ metadata:
   name: counter-redis-manifest
   namespace: argocd
 spec:
-  project: default
+  project: counter-fuf-manifest
   source:
     repoURL: https://github.com/HonzaFoniok/deploy-this-to-k8s.git
     path: k8s/redis-deployment
