@@ -10,8 +10,8 @@ spec:
     chart: redis
     targetRevision: 28.3.12
     helm:
-      values: |
-        architecture: standalone 
+      valuesObject:
+        architecture: standalone
         auth:
           enabled: false
   destination:
