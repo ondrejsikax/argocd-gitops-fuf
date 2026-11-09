@@ -20,6 +20,5 @@ spec:
     targetRevision: HEAD
     helm:
       valuesObject:
-        ingress:
-          host:
+        ingressHosts:
             - "frontend-helm.fuf3.sikademo.com"
