@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: counter-frontend
+  name: counter-frontend-manifest
   namespace: argocd
 spec:
   project: default
