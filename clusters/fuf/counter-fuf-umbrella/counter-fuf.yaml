@@ -20,5 +20,7 @@ spec:
     targetRevision: HEAD
     helm:
       valuesObject:
-        replicaCount: 4
+        replicaCount: 
+          frontend: 4
+          backend: 4
         host: frontend.fuf.sikademo.com
