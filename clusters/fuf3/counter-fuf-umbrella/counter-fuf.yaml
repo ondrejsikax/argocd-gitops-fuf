@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: counter-app
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    namespace: counter-app
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  source:
+    repoURL: https://github.com/HonzaFoniok/argocd-monorepo.git
+    path: helm
+    targetRevision: HEAD
+    helm:
+      valuesObject:
+        replicaCount: 4
+        host: frontend.fuf3.sikademo.com

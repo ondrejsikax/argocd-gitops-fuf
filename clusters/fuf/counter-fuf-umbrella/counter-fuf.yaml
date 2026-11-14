@@ -21,3 +21,4 @@ spec:
     helm:
       valuesObject:
         replicaCount: 4
+        host: frontend.fuf.sikademo.com
